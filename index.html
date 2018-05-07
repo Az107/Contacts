@@ -237,84 +237,89 @@
     </script>
     <title>Practica Final</title>
 </head>
-    <body>
+<body>
 
 
-        </div>
-        <h1>contactos</h1>
-        <div id="menu1">
-            <ul id="menu1id">
-                <br />
-                <li><button class="menuP" onclick="nuevoc(); return;">Nuevo</button></li>
-                &emsp;<a id = "usernum">&nbsp;0 contactos &nbsp;</a>
-                <br />
-                <br/>
-                <li><button class="menuP" onclick="buscarc(); return;">Buscar</button></li>
-                <br />
-                <li><button class="menuP" onclick="todosc(0); return;">Todos los contactos</button></li>
-                <br />
-            </ul>
-        </div>
-        <div id="formulario-N" class="window">
-            <header>
-                <input class="cerrar" value="[x]" type="button" onclick='document.getElementById("formulario-N").style.visibility = "hidden";'></input>
-              
-                <h2>Nuevo contacto</h2>
-            </header>
+    <div class="cabecera">
+    <ul>
+        <li><h1>Contactos</h1></li>
+
+    </ul>
+    </div>
+    <div id="menu1">
+        <ul id="menu1id">
             <br />
-            <form action="" >
-                Nombre: <input type="text" id="N-nombre" /><br />
-                <br />
-                Apellido: <input type="text" id="N-apellido" /><br />
-                <br />
-                Numero: <input type="text" id="N-numero" /><br />
-                <br />
-                Correo: <input type="text" id="N-mail" /><br />
-                <br />
-
-                <button onclick="nuevoct(); return false;" style="width:100%;">aceptar</button>
-                
-            </form>
-        </div>
-        <div id="formulario-B" class="window">
-            <header>
-                <input class="cerrar" value="[x]" type="button" onclick='document.getElementById("formulario-B").style.visibility = "hidden"; lista_busqueda = new Array();'></input>
-         
-                <h2>Buscar</h2>
-            </header>
+            <li><button class="menuP" onclick="nuevoc(); return;">Nuevo</button></li>
+            &emsp;
+            <a id="usernum">&nbsp;0 contactos &nbsp;</a>
             <br />
-           
-                Buscar: <input type="text" id="busqueda" /><br />
-                <br />
-                <div id="salidaB">
+            <br />
+            <li><button class="menuP" onclick="buscarc(); return;">Buscar</button></li>
+            <br />
+            <li><button class="menuP" onclick="todosc(0); return;">Todos los contactos</button></li>
+            <br />
+        </ul>
+    </div>
+    <div id="formulario-N" class="window">
+        <header>
+            <input class="cerrar" value="[x]" type="button" onclick='document.getElementById("formulario-N").style.visibility = "hidden";'></input>
 
-                </div>
+            <h2>Nuevo contacto</h2>
+        </header>
+        <br />
+        <form action="">
+            Nombre: <input type="text" id="N-nombre" /><br />
+            <br />
+            Apellido: <input type="text" id="N-apellido" /><br />
+            <br />
+            Numero: <input type="text" id="N-numero" /><br />
+            <br />
+            Correo: <input type="text" id="N-mail" /><br />
+            <br />
 
-                <button onclick="buscarct(); return false;" style="width:100%;">aceptar</button>
-            
+            <button onclick="nuevoct(); return false;" style="width:100%;">aceptar</button>
+
+        </form>
+    </div>
+    <div id="formulario-B" class="window">
+        <header>
+            <input class="cerrar" value="[x]" type="button" onclick='document.getElementById("formulario-B").style.visibility = "hidden"; lista_busqueda = new Array();'></input>
+
+            <h2>Buscar</h2>
+        </header>
+        <br />
+
+        Buscar: <input type="text" id="busqueda" /><br />
+        <br />
+        <div id="salidaB">
+
         </div>
 
-        <div id="formulario-R" class="window">
-            <header>
-                <input class="cerrar" value="[x]" type="button" onclick='document.getElementById("formulario-R").style.visibility = "hidden";'></input>
-               
-                <h2>contactos</h2>
-            </header>
-           
-            <div id="scroll">
+        <button onclick="buscarct(); return false;" style="width:100%;">aceptar</button>
+
+    </div>
+
+    <div id="formulario-R" class="window">
+        <header>
+            <input class="cerrar" value="[x]" type="button" onclick='document.getElementById("formulario-R").style.visibility = "hidden";'></input>
+
+            <h2>contactos</h2>
+        </header>
+
+        <div id="scroll">
 
             <table id="out">
                 <tr id="tname">
-                    <td class="ttitle">Nombre</td>  
+                    <td class="ttitle">Nombre</td>
                     <td class="ttitle">Apellido</td>
                     <td class="ttitle">numero</td>
                     <td class="ttitle">Correo</td>
 
                 </tr>
-            
+
             </table>
-            </div>
         </div>
-    </body>
+    </div>
+</body>
     
 </html>
