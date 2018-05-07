@@ -1,6 +1,6 @@
 <html>
 <head>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="estilo.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script lang="javascript">
 
@@ -13,7 +13,7 @@
 
         
         
-        //Solo decoracion
+        
 
         //sistema de ventanas
         function drag(elmnt) {
@@ -198,6 +198,7 @@
             document.getElementById("formulario-N").style.visibility = "hidden";
         }
 
+        //Logica de busqueda
         function buscarct() {
             console.log("buscando");
        
@@ -206,8 +207,11 @@
                 for (elemento in contacto){
                     console.log(contacto[elemento]);
                     dato = contacto[elemento]
-                    
-                    if (document.getElementById("busqueda").value==contacto[elemento]){
+
+                    let busqueda = String(document.getElementById("busqueda").value);
+                    let elemento_buscando = String(contacto[elemento]);
+
+                    if (elemento_buscando.toLowerCase().search(busqueda.toLowerCase()) != -1) {
 
                        console.log(contacto);
                        lista_busqueda.push(contacto);
