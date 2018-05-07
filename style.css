@@ -1,0 +1,113 @@
+body {
+    background-image: url("fondo.jpg");
+
+}
+
+h1{
+    color: white;
+    background-color: maroon;
+}
+#menu1{
+    justify-content: center;
+    vertical-align: middle;
+    
+    box-shadow: 4px 4px 6px maroon;
+    background-color: white;
+
+}
+#menu1cont {
+    border: solid 3px maroon;
+    display: block;
+    background-color: white;
+ 
+    list-style: none;
+}
+#menu1 a{
+    color: maroon;
+    border-radius: 20px;
+    border: solid 1px maroon;
+}
+.menup{
+    font-size: xx-large;
+    background-color: none;
+}
+button{
+    background-color: white;
+    border-radius: 30px;
+    text-shadow: none;
+    outline: none;
+    text-shadow: none;
+    border: solid white;
+    transition-duration: 0.5s;
+ 
+   
+    
+    
+}
+    button:hover {
+        box-shadow: 4px 4px 6px grey;
+        background-color: maroon;
+        color: white;
+       border: none;
+    }
+button:active {
+        color: maroon;
+        background-color: white;
+        border:1px maroon;
+    }
+
+
+
+
+
+       
+        #formulario-R #scroll {
+            overflow: scroll;
+        }
+        
+        .ttitle{
+            background-color: brown;
+            color: white;
+            
+        }
+
+.window {
+    justify-content: center;
+    vertical-align: middle;
+    top: 25%;
+    left: 50%;
+    box-shadow: 5px 5px 6px grey;
+    background-color: white;
+    visibility: hidden;
+    background-color: white;
+    z-index: 10;
+    position: fixed;
+    border: solid 3px maroon;
+}
+.window h2{
+    position: center;
+    color: white;
+}
+.window input{
+
+    border: thin 2px maroon;
+}
+.window header{
+    cursor: move;
+    z-index: 11;
+    background-color: maroon;
+}
+.window table, th, td {
+            border: 1px solid black;
+        }
+.cerrar{
+    
+    text-align: right;
+    background-color: maroon;
+    color: white;
+    border: dotted 2px white;
+}
+.cerrar:hover{
+    background-color: white;
+    color: maroon;
+}
