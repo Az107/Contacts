@@ -55,6 +55,7 @@ body {
     list-style-type: none;
     font-size: xx-large;
     background-color: none;
+    border: none;
 }
 button{
     background-color: white;
@@ -71,7 +72,7 @@ button{
         box-shadow: 4px 4px 6px grey;
         background-color: maroon;
         color: white;
-       border: none;
+        border: none;
     }
 button:active {
         color: maroon;
@@ -122,14 +123,27 @@ button:active {
     z-index: 11;
     background-color: maroon;
 }
-.window table, th, td {
-            border: 1px solid black;
-        }
+    .window table, th {
+        border: thin 1px  black;
+        box-shadow: grey 2px 2px 5px;
+    }
+.window table, th, td{
+    box-shadow: grey 2px 2px 5px;
+}
 .window button{
     width: 90%;
 }
+.element::-webkit-scrollbar {
+    width: 0 !important
+}
+.element {
+    -ms-overflow-style: none;
+}
+.element {
+    overflow: -moz-scrollbars-none;
+}
 .cerrar{
-    
+    background-image: "close.png";
     text-align: right;
     background-color: maroon;
     color: white;
@@ -183,5 +197,8 @@ input[type="text"]:hover{
             border: dotted 2px white;
             width: 20%;
             font-size: 100%;
+        }
+        .windows table{
+            width: 100%;
         }
 }
