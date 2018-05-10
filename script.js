@@ -82,9 +82,9 @@
         }
 
         function eliminar_datos(cid) {
-            var seguro = confirm("Esta seguro que desea eliminar el contacto " + master[cid].name + "?");
+            var seguro = confirm("Esta seguro que desea eliminar el contacto " + master[cid].nombre + "?");
             console.log(seguro);
-            if (seguro == "true") {
+            if (seguro == true) {
             console.log("Eliminado " + cid);
             master.splice(cid, 1);
             todosc(1);
@@ -156,7 +156,7 @@
             }
 
         }
-        
+
         //Creaccion de nueva entrada
         function nuevoct() {
             name = document.getElementById("N-nombre").value;

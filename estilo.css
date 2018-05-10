@@ -32,7 +32,7 @@ body {
     list-style-type: none;
     box-shadow: 4px 4px 6px maroon;
     background-color: white;
-    height: 35%;
+    height: auto;
     width: auto;
     border-radius: 10px;
 }
@@ -96,18 +96,19 @@ button:active {
         }
 
 .window {
+    border-radius: 4px;
     justify-content: center;
     vertical-align: middle;
     top: 25%;
     left: 50%;
-    box-shadow: 5px 5px 6px grey;
+    box-shadow: 5px 5px 6px  rgba(0, 0, 0, 0.5);;
     background-color: white;
     visibility: hidden;
     background-color: white;
     z-index: 10;
     position: fixed;
     border: solid 3px maroon;
-    height: 50%;
+    height: auto;
     width: auto;
    
 }
