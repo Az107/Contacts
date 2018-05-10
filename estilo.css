@@ -19,13 +19,14 @@ body {
 .cabecera li{
     display: inline;
 }
-    .cabecera li h1 {
+.cabecera li h1 {
         border: solid 2px white;
         font-size: 200%;
         color: white;
         display: block;
-    }
+}
 #menu1 {
+    
     justify-content: center;
     vertical-align: middle;
     list-style-type: none;
@@ -33,6 +34,7 @@ body {
     background-color: white;
     height: 35%;
     width: auto;
+    border-radius: 10px;
 }
 #menu1id {
     list-style-type: none;
@@ -46,6 +48,8 @@ body {
     list-style: none;
 }
 #menu1 a{
+    margin-top: 10px;
+    margin-bottom: 20px;
     position: absolute;
     color: maroon;
     border-radius: 20px;
@@ -56,23 +60,25 @@ body {
     font-size: xx-large;
     background-color: none;
     border: none;
+    
 }
 button{
+    
     background-color: white;
-    border-radius: 30px;
+    border-radius: 15px;
     text-shadow: none;
     outline: none;
     text-shadow: none;
     border: solid white;
     transition-duration: 0.5s;
-    
+    box-shadow: grey 2px 2px 2px;
 }
 
-    button:hover {
+button:hover {
         box-shadow: 4px 4px 6px grey;
         background-color: maroon;
         color: white;
-        border: none;
+        
     }
 button:active {
         color: maroon;
@@ -80,14 +86,8 @@ button:active {
         border:1px maroon;
     }
 
+     
 
-
-
-
-       
-        #formulario-R #scroll {
-            overflow: scroll;
-        }
         
         .ttitle{
             background-color: brown;
@@ -109,14 +109,11 @@ button:active {
     border: solid 3px maroon;
     height: 50%;
     width: auto;
+   
 }
 .window h2{
     position: center;
     color: white;
-}
-.window input{
-
-    border: thin 2px maroon;
 }
 .window header{
     cursor: move;
@@ -127,21 +124,18 @@ button:active {
         border: thin 1px  black;
         box-shadow: grey 2px 2px 5px;
     }
-.window table, th, td{
-    box-shadow: grey 2px 2px 5px;
-}
+    .window table, th, td {
+        box-shadow: grey 2px 2px 5px;
+        overflow: -moz-scrollbars-none;
+        -ms-overflow-style: none;
+    }
 .window button{
-    width: 90%;
+    width: 99%;
 }
-.element::-webkit-scrollbar {
+window table, th, td::-webkit-scrollbar {
     width: 0 !important
 }
-.element {
-    -ms-overflow-style: none;
-}
-.element {
-    overflow: -moz-scrollbars-none;
-}
+
 .cerrar{
     background-image: "close.png";
     text-align: right;
@@ -154,20 +148,24 @@ button:active {
     color: maroon;
 }
 input[type="text"]{
-    border: solid 1px grey;
-    border-radius: 10px;
+
+    border: none;
+    border-bottom: solid 1px white;
     width: 200px;
     box-shadow: grey 1px 1px 5px;
+    transition: border 0.25s;
+    transition-timing-function: linear;
 }
 input[type="text"]:hover{
-    border: solid maroon;
+    border-bottom: solid maroon;
 }
     input[type="text"]:focus {
-        border: solid maroon;
+        border-bottom: solid maroon;
     }
 @media only screen and (max-width: 600px) {
     #menu1{
-        width: 90%;
+        width: 99%;
+        height: 60%;
     }
     button {
         width: 90%;

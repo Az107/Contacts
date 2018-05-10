@@ -2,7 +2,7 @@
 <head>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" href="estilo.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script lang="javascript">
@@ -30,6 +30,11 @@
             }
 
             function dragMauseDown(e) {
+                var ventanas = document.getElementsByClassName("window");
+                for (i = 0; i < ventanas.length;i++) {
+                    ventanas[i].style.zIndex = "10";
+                }
+                elmnt.style.zIndex = "11";
                 e = e || window.event;
                 pos3 = e.clientX;
                 pos4 = e.clientY;
@@ -49,6 +54,7 @@
 
                 document.onmouseup = null;
                 document.onmousemove = null;
+                
             }
         }
 
@@ -86,9 +92,13 @@
         }
 
         function eliminar_datos(cid) {
+            var seguro = confirm("Esta seguro que desea eliminar el contacto " + master[cid].name + "?");
+            console.log(seguro);
+            if (seguro == "true") {
             console.log("Eliminado " + cid);
             master.splice(cid, 1);
             todosc(1);
+            }
 
 
             document.getElementById("usernum").innerHTML = "&nbsp;" + master.length + " contactos &nbsp;";
