@@ -5,6 +5,14 @@
         lista_busqueda = new Array();
 
 
+        if (localStorage.getItem("master") == ""){
+                alert("Bienvenido por primera vez");
+        }else{
+
+            master = localStorage.getItem("master");
+        }
+        
+        
 
 
 
@@ -196,7 +204,7 @@
             todosc(1);
 
             document.getElementById("usernum").innerHTML = "&nbsp;" + master.length + " contactos &nbsp;";
-
+            localStorage.setItem("master",master);
             //ocultar y restablece la ventana
 
 
