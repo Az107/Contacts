@@ -5,11 +5,15 @@
         lista_busqueda = new Array();
 
 
-        if (localStorage.getItem("master") == ""){
+        if (localStorage.length  == 0){
                 alert("Bienvenido por primera vez");
         }else{
-
-            master = localStorage.getItem("master");
+            try{
+                master = localStorage.getItem("master");
+            }
+            catch{
+                alert("ERROR\n No se a podido recuperar sus archivos\n Le rogamos, disculpe las molestias");
+            }
         }
         
         
