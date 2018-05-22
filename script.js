@@ -5,23 +5,24 @@
         lista_busqueda = new Array();
 
 
+
         if (localStorage.length  == 0){
                 alert("Bienvenido por primera vez");
         }else{
             try{
-                master = localStorage.getItem("master");
+                master = JSON.parse(localStorage.getItem("master"));
             }
             catch{
-                alert("ERROR\n No se a podido recuperar sus archivos\n Le rogamos, disculpe las molestias");
+                alert("ERROR\n No se a podido recuperar sus archivos\n Le rogamos disculpe las molestias");
             }
         }
+         
         
-        
-
-
+    
 
         //sistema de ventanas
         function drag(elmnt) {
+            document.getElementById("usernum").innerHTML = "&nbsp;" + master.length + " contactos &nbsp;";
             var pos2 = 0, pos2 = 0, pos3 = 3, pos4 = 0;
             if (document.getElementById(elmnt.id + "header")) {
                 document.getElementById(elmnt.id + "header").onmousedown = dragMauseDown;
@@ -100,6 +101,7 @@
             console.log("Eliminado " + cid);
             master.splice(cid, 1);
             todosc(1);
+            localStorage.setItem("master",JSON.stringify(master));
             }
 
 
@@ -208,7 +210,7 @@
             todosc(1);
 
             document.getElementById("usernum").innerHTML = "&nbsp;" + master.length + " contactos &nbsp;";
-            localStorage.setItem("master",master);
+            localStorage.setItem("master",JSON.stringify(master));
             //ocultar y restablece la ventana
 
 
@@ -244,4 +246,3 @@
             console.log(lista_busqueda);
             todosc(2);
         }
-

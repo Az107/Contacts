@@ -9,7 +9,7 @@
     <script lang="javascript" src="script.js"></script>
     <title>Practica Final</title>
 </head>
-<body>
+<body onload='document.getElementById("usernum").innerHTML = "&nbsp;" + master.length + " contactos &nbsp;";''>
 
 
     <div class="cabecera">
@@ -28,7 +28,7 @@
             <br />
             <li><button class="menuP" onclick="nuevoc(); return;">Nuevo</button></li>
             &emsp;
-            <a id="usernum">&nbsp;0 contactos &nbsp;</a>
+            <a id="usernum">&nbsp;Cargando &nbsp;</a>
             <br />
             <br />
             <li><button class="menuP" onclick="buscarc(); return;">Buscar</button></li>
