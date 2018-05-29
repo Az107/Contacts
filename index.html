@@ -44,14 +44,19 @@
             <h2>Nuevo contacto</h2>
         </header>
         <br />
-        <form action="">
+        <form action="" autocomplete="off">
             Nombre:&nbsp; <input type="text" id="N-nombre" />&nbsp;<br />
             <br />
             Apellido: <input type="text" id="N-apellido" />&nbsp;<br />
             <br />
             Numero:&nbsp; <input type="text" id="N-numero" />&nbsp;<br />
             <br />
-            Correo:&nbsp;&nbsp; <input type="text" id="N-mail" />&nbsp;<br />
+            Correo:&nbsp;&nbsp; <input onkeyup="autocompletar();" onblur="autocompletar_ocultar();"  type="text" id="N-mail" />&nbsp;<br />
+            <div id="sugest"  >
+                    <li id="sugest-list">
+                    </li>
+
+            </div>
             <br />
 
             &nbsp;<button onclick="nuevoct(); return false;">aceptar</button>&nbsp;

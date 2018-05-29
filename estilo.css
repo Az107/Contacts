@@ -163,6 +163,12 @@ input[type="text"]:hover{
     input[type="text"]:focus {
         border-bottom: solid maroon;
     }
+#sugest{
+    display: none;
+    background-color: red;
+    z-index: 20;
+    box-shadow: grey 2px 2px 5px;
+}
 @media only screen and (max-width: 600px) {
     #menu1{
         width: 99%;

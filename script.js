@@ -1,5 +1,7 @@
- //variables globales
-
+var es_ie = navigator.userAgent.indexOf("MSIE") > -1 ;
+if(es_ie){
+                alert("NO PROGRAMO PARA INTERNET EXPLORER");
+}
         const MAX = 5;
         master = new Array();
         lista_busqueda = new Array();
@@ -14,6 +16,7 @@
             }
             catch{
                 alert("ERROR\n No se a podido recuperar sus archivos\n Le rogamos disculpe las molestias");
+                localStorage.removeChild("master");
             }
         }
          
@@ -72,6 +75,32 @@
             this.mail = mail;
         }
 
+
+        //email autocomplete
+
+        function autocompletar(){
+            console.log("iniciando autocomplete");
+            mail_box =  document.getElementById("N-mail");
+            sugest_box = document.getElementById("sugest");
+            lista = document.getElementById("sugest");
+            lista.innerHTML = ""
+            sugest_box.style.display = "inline";
+            el_li = document.createElement("ul")
+            el_li.innerHTML = mail_box.value + "@gmail.com"
+            lista.appendChild(el_li);
+             el_li = document.createElement("ul")
+            el_li.innerHTML = mail_box.value + "@hotmail.com"
+            lista.appendChild(el_li);
+            el_li = document.createElement("ul")
+            el_li.innerHTML = mail_box.value + "@outlook.com"
+            lista.appendChild(el_li);
+
+
+
+        }
+        function autocompletar_ocultar(){
+            sugest_box.style.display = "none";
+        }
 
         //creador de ventanas
         //muestra los div (las ventanas) e inicializa el movimiento de las mismas
@@ -193,6 +222,12 @@
                 alert("El numero introducido no es valido");
                 document.getElementById("N-numero").value = "";
                 return;
+            }
+            if (!mail_re.test(mail)){
+                alert("El email introducido no es valido");
+                  document.getElementById("N-numero").value = "";
+                return;
+
             }
 
             //introduce los datos a el objeto que esta en el array
